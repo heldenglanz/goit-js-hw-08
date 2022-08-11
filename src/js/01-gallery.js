@@ -1,6 +1,7 @@
 // Add imports above this line
 import { galleryItems } from './gallery-items';
 import "simplelightbox/dist/simple-lightbox.min.css";
+import SimpleLightbox from "simplelightbox";
 
 
 const galleryContainer = document.querySelector('.gallery');
@@ -27,4 +28,3 @@ let gallery = new SimpleLightbox('.gallery a',{
     captionDelay: 250,
     docClose: true,
 });
-
