@@ -21,7 +21,6 @@ function createPhotoMarcup(galleryItems) {
 };
 
 
-
 let gallery = new SimpleLightbox('.gallery a',{
     captionPosition: "bottom",
     captionsData: "alt",
