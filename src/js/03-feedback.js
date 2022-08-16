@@ -7,8 +7,9 @@ const inputEl = document.querySelector("textarea");
 const emailEl = document.querySelector("input");
 
 formEl.addEventListener('submit', submitFn);
-inputEl.addEventListener('input', throttle(inputChange, 500));
-emailEl.addEventListener('input', throttle(inputChange, 500));
+formEl.addEventListener('input', throttle(inputChange, 500));
+// inputEl.addEventListener('input', throttle(inputChange, 500));
+// emailEl.addEventListener('input', throttle(inputChange, 500));
 savedTextarea()
 
 function submitFn(e){
@@ -25,6 +26,7 @@ function inputChange(e){
         message: messageText,
     }
    localStorage.setItem(STORAGE_KEY, JSON.stringify(savedMessage));
+console.log(savedMessage)
 }
 
 function savedTextarea(){
