@@ -11,11 +11,14 @@ formEl.addEventListener('input', throttle(inputChange, 500));
 // inputEl.addEventListener('input', throttle(inputChange, 500));
 // emailEl.addEventListener('input', throttle(inputChange, 500));
 savedTextarea()
+let savedMessage;
 
 function submitFn(e){
     e.preventDefault();
     e.currentTarget.reset();
-    localStorage.removeItem(STORAGE_KEY)
+    console.log(localStorage.getItem(STORAGE_KEY))
+    localStorage.removeItem(STORAGE_KEY);
+
  }
  
 function inputChange(e){
@@ -26,7 +29,7 @@ function inputChange(e){
         message: messageText,
     }
    localStorage.setItem(STORAGE_KEY, JSON.stringify(savedMessage));
-console.log(savedMessage)
+
 }
 
 function savedTextarea(){
