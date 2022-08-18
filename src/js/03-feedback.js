@@ -40,9 +40,3 @@ function savedTextarea(){
         inputEl.value = parsed.message;
     }
 }
-
-fifa={
-    foifi:321,
-    fefe:3214,
-}
-console.log(fifa)
