@@ -16,7 +16,7 @@ let savedMessage;
 function submitFn(e){
     e.preventDefault();
     e.currentTarget.reset();
-    console.log(localStorage.getItem(STORAGE_KEY))
+    console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)))
     localStorage.removeItem(STORAGE_KEY);
 
  }
@@ -40,3 +40,9 @@ function savedTextarea(){
         inputEl.value = parsed.message;
     }
 }
+
+fifa={
+    foifi:321,
+    fefe:3214,
+}
+console.log(fifa)
